@@ -1,5 +1,5 @@
 {
-  "name": "github-star-counter",
+  "name": "github-analysis",
   "version": "1.0.1",
   "description": "An API to count a GitHub user's total stars, working with shield.io.",
   "main": "index.js",
@@ -7,23 +7,20 @@
     "build": "webpack",
     "dev": "NODE_ENV=development npm run build",
     "format": "prettier --write '**/*.{ts,js,css,json,md}'",
-    "test:clean": "rimraf ./transpiled/src ./transpiled/test",
-    "test": "npm run test:clean && npm run transpile && mocha --require source-map-support/register --recursive transpiled/test",
+    "test": "npm run transpile && mocha --require source-map-support/register --recursive transpiled/test",
     "transpile": "tsc --project ./test",
-    "deploy:production": "wrangler publish --env production"
+    "deploy:production": "wrangler deploy --env production"
   },
   "author": "idealclover <idealclover@163.com> & fengkx <liangkx8237@gmail.com>",
   "license": "MIT OR Apache-2.0",
   "devDependencies": {
-    "@cloudflare/workers-types": "^1.0.1",
+    "@cloudflare/workers-types": "^4.20250517.0",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "prettier": "^1.18.2",
-    "rimraf": "^3.0.2",
     "service-worker-mock": "^2.0.3",
-    "source-map-loader": "^0.2.4",
     "source-map-support": "^0.5.12",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
