@@ -36,6 +36,12 @@ In order to increase the API rate limit, you can register GitHub auth code [here
 
 This is a serverless function deployed on Cloudflare Workers. Please check: [Quick Start | Cloudflare Workers](https://developers.cloudflare.com/workers/quickstart) if you want to deploy or contribute.
 
+### Production Deployment
+
+The production deployment is handled using the `cloudflare/wrangler-action@1.1.0` GitHub Action. This action automates the deployment process to Cloudflare Workers.
+
+To deploy to production, ensure you have the `CF_API_TOKEN` secret set in your GitHub repository. The deployment environment is set to 'production'.
+
 ## LICENSE
 
 Inspired by [yyx990803/starz](https://github.com/yyx990803/starz).
