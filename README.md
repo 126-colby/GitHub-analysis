@@ -1,6 +1,6 @@
 # GitHub-Star-Counter
 
-> ✨ City of stars, are you shining just for me?
+> ✨ City of stars, are you shining just for me?  
 
 ## What Is It
 
